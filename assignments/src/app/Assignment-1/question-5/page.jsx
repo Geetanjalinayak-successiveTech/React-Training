@@ -1,4 +1,4 @@
-import TaskList from "@/components/question-5";
+import TaskList from "@/app/Assignment-1/components/question-5";
 
 const task = [
   {
@@ -15,5 +15,5 @@ const task = [
   },
 ];
 export default function printTask() {
-  return (<TaskList tasks={task} />);
+  return <TaskList tasks={task} />;
 }
