@@ -1,52 +1,36 @@
-
 import Link from "next/link";
 
-
-
-
-
 export default function HomePage() {
-  
-
   return (
-    <main style={styles.container}>
-      <ul>
-      <li>
-        <Link href="/Assignment-1" style={styles.heading}>Assignment-1</Link>
-      </li>
+    <main
+    style={{
+        minHeight: "100vh",
+        backgroundColor: "#5F9EA0",
+        padding: "40px",
+        fontFamily: "sans-serif",
+      }}>
+        <h1> Welcome to Assignments</h1>
+      <ul style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          gap: "20px",
+          listStyle: "none",
+          padding: 0,
+        }}>
 
+        <li
+        style={{
+            background: "white",
+            padding: "20px",
+            borderRadius: "12px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+            textAlign: "center",
+            fontWeight: "bold",
+            transition: "transform 0.3s, box-shadow 0.3s",
+          }}>
+          <Link href="/Assignment-1">Assignment-1</Link>
+        </li>
       </ul>
     </main>
-      
-    
-    
   );
 }
-
-const styles = {
-  container: {
-    padding: '2rem',
-    fontFamily: 'Arial, sans-serif',
-  },
-  heading: {
-    marginBottom: '1rem',
-  },
-  list: {
-    listStyle: 'none',
-    padding: 0,
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1rem',
-  },
-  button: {
-    display: 'inline-block',
-    padding: '10px 20px',
-    backgroundColor: '#0070f3',
-    color: '#fff',
-    textDecoration: 'none',
-    borderRadius: '6px',
-    fontWeight: 'bold',
-    width: 'fit-content',
-  },
-};
-
