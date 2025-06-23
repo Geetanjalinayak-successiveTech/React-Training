@@ -30,6 +30,10 @@ export default function QuestionPage() {
          <li>
           <Link href={"/Assignment-2/notification"}>Question-7</Link>
         </li>
+
+         <li>
+          <Link href={"/Assignment-2/Theme"}>Question-9</Link>
+        </li>
       </ul>
     </main>
   );
