@@ -10,13 +10,7 @@ import { useContext } from "react";
 export default function Language() {
   const { lang, setLang } = useContext(LanguageSwitcher);
 
-  const handleLanguage = () => {
-    if (lang === "en") {
-      setLang("span");
-    } else {
-      setLang("en");
-    }
-  };
+ 
 
   return (
     <main>

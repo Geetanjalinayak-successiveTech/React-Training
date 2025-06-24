@@ -12,7 +12,7 @@ export default function Clock()
         },1000)
 
         return ()=>clearInterval(currTime);
-    }, []);
+    }, [time]);
 
     return(
         <main>
