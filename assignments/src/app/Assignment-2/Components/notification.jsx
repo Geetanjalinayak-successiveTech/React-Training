@@ -11,25 +11,23 @@ export default function Notification() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    if(message)
-    {
+    if (message) {
       const timer = setTimeout(() => {
         setMessage("");
       }, 5000);
 
-       return ()=> clearInterval(timer);
-    }   
-    
+      return () => clearInterval(timer);
+    }
+  }, [message]);
 
-   
-
-},[message]);
-
-return(
+  return (
     <main>
-        <button onClick={()=>setMessage("This is new message")}> Notify Me </button>
+      <button onClick={() => setMessage("This is new message")}>
+        {" "}
+        Notify Me{" "}
+      </button>
 
-        <p>Message:{message}</p>
+      <p>Message:{message}</p>
     </main>
-)
+  );
 }

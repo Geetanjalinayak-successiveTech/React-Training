@@ -34,6 +34,14 @@ export default function QuestionPage() {
          <li>
           <Link href={"/Assignment-2/Theme"}>Question-9</Link>
         </li>
+
+        <li>
+          <Link href={"/Assignment-2/Language"}>Question-10</Link>
+        </li>
+
+         <li>
+          <Link href={"/Assignment-2/ShoppingCart"}>Question-11</Link>
+        </li>
       </ul>
     </main>
   );
