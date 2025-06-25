@@ -1,6 +1,6 @@
 "use client";
-import { createContext, useState} from "react";
-import  {ProductList, Cart} from "../Components/Shopping-cart";
+import { createContext, useState } from "react";
+import { ProductList, Cart } from "../Components/Shopping-cart";
 
 const CartContext = createContext();
 export default function CartProvider() {
@@ -10,24 +10,21 @@ export default function CartProvider() {
     setCartItems([...cartItems, product]);
   };
 
-  const removeItems = (id) =>
+  const removeItems = (id) => {
     setCartItems(cartItems.filter((ele) => ele.id !== id));
-  
+  };
+
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
-   <CartContext.Provider value={{ cartItems, addItems, removeItems, total }}>
+    <CartContext.Provider value={{ cartItems, addItems, removeItems, total }}>
       <h1>Shopping Cart</h1>
       <div>
         <ProductList />
         <Cart />
       </div>
     </CartContext.Provider>
-);
+  );
 }
 
-
-
-
-
-export {CartContext}
+export { CartContext };

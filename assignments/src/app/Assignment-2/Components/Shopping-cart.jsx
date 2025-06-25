@@ -13,6 +13,7 @@ import { CartContext } from "../ShoppingCart/page"
 
 
 
+
 export function ProductList() {
   const { addItems } = useContext(CartContext);
   const products = [
@@ -35,7 +36,7 @@ export function ProductList() {
 }
 
 export function Cart() {
-  const { cartItems, removeItem, total } = useContext(CartContext);
+  const { cartItems, removeItems, total } = useContext(CartContext);
 
   return (
     <div>
@@ -47,7 +48,7 @@ export function Cart() {
           {cartItems.map((item) => (
             <div key={item.id}>
               {item.name} - ₹{item.price}
-              <button onClick={() => removeItem(item.id)}>Remove</button>
+              <button onClick={() => removeItems(item.id)}>Remove</button>
             </div>
           ))}
           <h3>Total: ₹{total}</h3>
