@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function CountWithSteps() {
   const [count, setCount] = useState(0);
-  const [step, setStep] = useState();
+  const [step, setStep] = useState(0);
 
   const increment = () => {
     setCount(count + Number(step));
@@ -22,10 +22,10 @@ export default function CountWithSteps() {
     <main>
       <h2>Counter with steps</h2>
       <h4>Count: {count}</h4>
-      <label>
+      
         step:
         <input type="text" value={step} onChange={handleStep} />
-      </label>
+     
 
       <button onClick={increment}> Increment </button>
        <button onClick={decrement}> Decrement </button>
