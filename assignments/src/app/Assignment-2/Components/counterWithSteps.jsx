@@ -15,7 +15,7 @@ export default function CountWithSteps() {
 
   const handleStep = (e) => {
     const val = e.target.value;
-    setStep(val === "" ? 1 : parseInt(val, 10));
+    setStep(val === "" ? 1 : parseInt(val));
   };
 
   return (

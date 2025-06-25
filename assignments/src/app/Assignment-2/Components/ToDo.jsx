@@ -19,17 +19,17 @@ export default function ToDo() {
   };
 
   const updateToDo = (id) => {
-    const update = toDo.map((ele) => {
-      ele.id === id ? { ...ele, completed: !ele.completed } : ele;
-    });
+    const update = toDo.map((ele) => 
+      ele.id === id ? { ...ele, completed: !ele.completed } : ele
+    );
 
     setToDo(update);
   };
 
   const deleteToDo = (id) => {
-    const delToDo = toDo.filter((ele) => {
-      ele.id !== id;
-    });
+    const delToDo = toDo.filter((ele) => 
+      ele.id !== id
+    );
     setToDo(delToDo);
   };
 
@@ -45,11 +45,15 @@ export default function ToDo() {
       <button onClick={addTask}>Add</button>
 
       {toDo.map((todo) => (
-        <input
-          type="checkbox"
-          checked={todo.completed}
-          onChange={() => updateToDo(todo.id)}
-        />
+        <div key={todo.id}>
+          <input
+            type="checkbox"
+            checked={todo.completed}
+            onChange={() => updateToDo(todo.id)}
+          />
+          {todo.task}
+          <button onClick={() => deleteToDo(todo.id)}>Delete</button>
+        </div>
       ))}
     </div>
     //   <div>
