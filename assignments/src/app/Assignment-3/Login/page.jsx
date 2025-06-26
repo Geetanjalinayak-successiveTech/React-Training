@@ -10,11 +10,15 @@ export default function LoginPage() {
 
   function handleLogin(e) {
     e.preventDefault();
-    if (username === "admin" && password === "1234") {
+    if (username === "Geetanjali" && password === "1234") {
       localStorage.setItem("user", JSON.stringify({ username }));
       router.push("/Assignment-3/Home");
+      
+      
+      
+
     } else {
-      setMsg("Invalid credentials");
+      setMsg("Invalid Details");
     }
   }
 
