@@ -1,25 +1,27 @@
 import Link from "next/link";
 
-export default function HomePage() {
+export default function QuestionPage() {
   return (
-    <main
-    style={{
-        minHeight: "100vh",
-        backgroundColor: "#5F9EA0",
-        padding: "40px",
-        fontFamily: "sans-serif",
-      }}>
-        <h1> Welcome to Assignments</h1>
-      <ul style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "20px",
-          listStyle: "none",
-          padding: 0,
-        }}>
+    <main>
+      <ul>
+        <li
+          style={{
+            background: "white",
+            padding: "20px",
+            borderRadius: "12px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+            textAlign: "center",
+            fontWeight: "bold",
+            transition: "transform 0.3s, box-shadow 0.3s",
+          }}
+        >
+          <Link href={"/Assignment-3/UserAuthentication"}>
+            User Authentication
+          </Link>
+        </li>
 
         <li
-        style={{
+          style={{
             background: "white",
             padding: "20px",
             borderRadius: "12px",
@@ -27,12 +29,15 @@ export default function HomePage() {
             textAlign: "center",
             fontWeight: "bold",
             transition: "transform 0.3s, box-shadow 0.3s",
-          }}>
-          <Link href="/Assignment-1">Assignment-1</Link>
+          }}
+        >
+          <Link href={"/Assignment-3/AuthenticationAndTheme"}>
+            User Authentication with Theme Prefrenece
+          </Link>
         </li>
 
-         <li
-        style={{
+        <li
+          style={{
             background: "white",
             padding: "20px",
             borderRadius: "12px",
@@ -40,22 +45,11 @@ export default function HomePage() {
             textAlign: "center",
             fontWeight: "bold",
             transition: "transform 0.3s, box-shadow 0.3s",
-          }}>
-          <Link href="/Assignment-2">Assignment-2</Link>
-        </li>
-
-
-         <li
-        style={{
-            background: "white",
-            padding: "20px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-            textAlign: "center",
-            fontWeight: "bold",
-            transition: "transform 0.3s, box-shadow 0.3s",
-          }}>
-          <Link href="/Assignment-3">Assignment-3</Link>
+          }}
+        >
+          <Link href={"/Assignment-3/Question-3-4"}>
+            User Authentication with Theme Prefrenece
+          </Link>
         </li>
       </ul>
     </main>
