@@ -16,7 +16,7 @@ export default function Notification() {
         setMessage("");
       }, 5000);
 
-      return () => clearInterval(timer);
+      return () => clearTimeout(timer);
     }
   }, [message]);
 
