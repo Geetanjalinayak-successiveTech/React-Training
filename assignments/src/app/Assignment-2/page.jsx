@@ -16,7 +16,7 @@ export default function QuestionPage() {
       <ul>
         {question.map((num) => (
           <li  style={styleQuestion} key={num}>
-            <Link href={`Assignment-1/question-${num}`}> Question -{num}</Link>
+            <Link href={`Assignment-2/question-${num}`}> Question -{num}</Link>
           </li>
         ))}
       </ul>
