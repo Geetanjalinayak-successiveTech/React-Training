@@ -1,6 +1,17 @@
 import Link from "next/link";
 
 export default function HomePage() {
+  const styleQuestion = {
+    background: "white",
+    padding: "20px",
+    borderRadius: "12px",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+    textAlign: "center",
+    fontWeight: "bold",
+    transition: "transform 0.3s, box-shadow 0.3s",
+  };
+
+  const question = [1, 2, 3, 4, 5, 6];
   return (
     <main
       style={{
@@ -19,81 +30,11 @@ export default function HomePage() {
           padding: 0,
         }}
       >
-        <li
-          style={{
-            background: "white",
-            padding: "20px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-            textAlign: "center",
-            fontWeight: "bold",
-            transition: "transform 0.3s, box-shadow 0.3s",
-          }}
-        >
-          <Link href="/Assignment-1/question-1">Question-1</Link>
-        </li>
-
-        <li
-        style={{
-            background: "white",
-            padding: "20px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-            textAlign: "center",
-            fontWeight: "bold",
-            transition: "transform 0.3s, box-shadow 0.3s",
-          }}>
-          <Link href="/Assignment-1/question-2">Question-2</Link>
-        </li>
-
-        <li
-        style={{
-            background: "white",
-            padding: "20px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-            textAlign: "center",
-            fontWeight: "bold",
-            transition: "transform 0.3s, box-shadow 0.3s",
-          }}>
-          <Link href="/Assignment-1/question-3">Question-3</Link>
-        </li>
-
-        <li style={{
-            background: "white",
-            padding: "20px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-            textAlign: "center",
-            fontWeight: "bold",
-            transition: "transform 0.3s, box-shadow 0.3s",
-          }}>
-          <Link href="/Assignment-1/question-4">Question-4</Link>
-        </li>
-
-        <li style={{
-            background: "white",
-            padding: "20px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-            textAlign: "center",
-            fontWeight: "bold",
-            transition: "transform 0.3s, box-shadow 0.3s",
-          }}>
-          <Link href="/Assignment-1/question-5">Question-5</Link>
-        </li>
-
-        <li style={{
-            background: "white",
-            padding: "20px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-            textAlign: "center",
-            fontWeight: "bold",
-            transition: "transform 0.3s, box-shadow 0.3s",
-          }}>
-          <Link href="/Assignment-1/question-6">Question-6</Link>
-        </li>
+        {question.map((num) => (
+          <li  style={styleQuestion} key={num}>
+            <Link href={`Assignment-1/question-${num}`}> Question -{num}</Link>
+          </li>
+        ))}
       </ul>
     </main>
   );
