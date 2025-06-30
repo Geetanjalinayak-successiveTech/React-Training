@@ -11,6 +11,7 @@ export default function HomePage() {
     transition: "transform 0.3s, box-shadow 0.3s",
   };
 
+  const question = [1, 2, 3, 4, 5, 6];
   return (
     <main
       style={{
@@ -29,29 +30,11 @@ export default function HomePage() {
           padding: 0,
         }}
       >
-        <li style={{styleQuestion}}>
-          <Link href="/Assignment-1/question-1">Question-1</Link>
-        </li>
-
-        <li style={{ styleQuestion }}>
-          <Link href="/Assignment-1/question-2">Question-2</Link>
-        </li>
-
-        <li style={{ styleQuestion }}>
-          <Link href="/Assignment-1/question-3">Question-3</Link>
-        </li>
-
-        <li style={{ styleQuestion }}>
-          <Link href="/Assignment-1/question-4">Question-4</Link>
-        </li>
-
-        <li style={{ styleQuestion }}>
-          <Link href="/Assignment-1/question-5">Question-5</Link>
-        </li>
-
-        <li style={{ styleQuestion }}>
-          <Link href="/Assignment-1/question-6">Question-6</Link>
-        </li>
+        {question.map((num) => (
+          <li  style={styleQuestion} key={num}>
+            <Link href={`Assignment-1/question-${num}`}> Question -{num}</Link>
+          </li>
+        ))}
       </ul>
     </main>
   );

@@ -5,12 +5,12 @@ import { useRouter } from "next/navigation";
 
 export default function QuestionPage() {
   const router = useRouter();
+  
 
   return (
     <main>
       <ul>
-        <li
-          style={{
+        <li style={{
             background: "white",
             padding: "20px",
             borderRadius: "12px",
@@ -19,6 +19,7 @@ export default function QuestionPage() {
             fontWeight: "bold",
             transition: "transform 0.3s, box-shadow 0.3s",
           }}
+          
         >
           <button
             onClick={() => router.push("Assignment-3/UserAuthentication")}
