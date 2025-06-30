@@ -5,7 +5,12 @@ import { useRouter } from "next/navigation";
 
 export default function QuestionPage() {
   const router = useRouter();
-  const styleQuestion={
+  
+
+  return (
+    <main>
+      <ul>
+        <li style={{
             background: "white",
             padding: "20px",
             borderRadius: "12px",
@@ -13,12 +18,7 @@ export default function QuestionPage() {
             textAlign: "center",
             fontWeight: "bold",
             transition: "transform 0.3s, box-shadow 0.3s",
-          }
-
-  return (
-    <main>
-      <ul>
-        <li
+          }}
           
         >
           <button
