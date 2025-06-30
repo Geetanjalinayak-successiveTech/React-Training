@@ -67,6 +67,16 @@ export default function Home() {
        Modal Dialog{" "}
       </button>
 
+       <button onClick={() => router.push("/Assignment-4/MUI-table_component")}>
+        {" "}
+      Table Component{" "}
+      </button>
+
+        <button onClick={() => router.push("/Assignment-4/complex-form")}>
+        {" "}
+      Form Validation{" "}
+      </button>
+
       
 
       </div>
