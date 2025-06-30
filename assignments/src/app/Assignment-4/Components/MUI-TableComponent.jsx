@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-const rows = [
+export const rows = [
   { id: 1, name: "A", age: 25, city: "Delhi" },
   { id: 2, name: "B", age: 30, city: "Mumbai" },
   { id: 3, name: "C", age: 28, city: "Kolkata" },
