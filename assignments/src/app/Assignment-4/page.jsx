@@ -1,10 +1,12 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Sidebar from "./Components/Drawer-MUI";
 
 export default function Home() {
   const router = useRouter();
   return (
+    
     <main style={{
         display: "flex",
         justifyContent: "center",

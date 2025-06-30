@@ -1,6 +1,6 @@
  function Greeting()
  {
-    return <h1> Hello Next.js! </h1>;
+    return <h1 style={{ display:"flex" ,justifyContent:"centre" , alignItems:"center" , height:"100vh" }}> Hello Next.js! </h1>;
 
  }
 
