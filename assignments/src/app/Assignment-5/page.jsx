@@ -56,6 +56,12 @@ export default function Home() {
           {" "}
           POST Data{" "}
         </button>
+
+         <button onClick={() => router.push("/Assignment-5/Reusable_Button")}>
+          {" "}
+          
+          reusable Button{" "}
+        </button>
       </div>
     </main>
   );
