@@ -56,6 +56,21 @@ export default function Home() {
           {" "}
           POST Data{" "}
         </button>
+
+         <button onClick={() => router.push("/Assignment-5/AuthHOC")}>
+          {" "}
+         Authenticate page with HOC{" "}
+        </button>
+
+        <button onClick={() => router.push("/Assignment-5/Logger")}>
+          {" "}
+         Logger page with HOC{" "}
+        </button>
+
+        <button onClick={() => router.push("/Assignment-5/fetchDataHOC")}>
+          {" "}
+         Users Data{" "}
+        </button>
       </div>
     </main>
   );
