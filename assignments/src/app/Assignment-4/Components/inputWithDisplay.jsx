@@ -7,18 +7,20 @@ export default function InputWithDisplay() {
 
   function handleClick() {
     input !== ""
-      ? setMessage("This message is Shown Because you typed something ")
+      ? setMessage("Message Typed")
       : setMessage("");
   }
 
   return (
-    <main style={{
+    <main
+      style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-       
+        flexDirection:"flex",
         background: "#f4f4f4",
-      }}>
+      }}
+    >
       <input
         type="text"
         value={input}
@@ -26,7 +28,7 @@ export default function InputWithDisplay() {
       />
       <br />
       <button onClick={handleClick}> CLick to show message </button>
-      {message!=="" ? <h2>{message}</h2> : <></>}
+      {message && <h2>{message}</h2>}
     </main>
   );
 }

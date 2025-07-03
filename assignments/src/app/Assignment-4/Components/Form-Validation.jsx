@@ -23,6 +23,8 @@ export default function MUIForm() {
     if (validate()) {
       alert("Form submitted!");
       setFormData({ name: "", email: "" });
+    } else {
+      alert("Error in the form");
     }
   };
 
@@ -47,7 +49,9 @@ export default function MUIForm() {
         label="Name"
         variant="outlined"
         value={formData.name}
-        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, name: e.target.value }))
+        }
         error={!!errors.name}
         helperText={errors.name}
         fullWidth
@@ -57,7 +61,9 @@ export default function MUIForm() {
         label="Email"
         variant="outlined"
         value={formData.email}
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, email: e.target.value }))
+        }
         error={!!errors.email}
         helperText={errors.email}
         fullWidth

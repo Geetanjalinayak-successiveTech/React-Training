@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import { TextField, Button, Box, Typography } from "@mui/material";
 import { useState } from "react";
 
-const SignUpSchema = Yup.object().shape({
+const signUpSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
 
   Password: Yup.string()
@@ -15,12 +15,13 @@ const SignUpSchema = Yup.object().shape({
 
 export default function FormErrorHandling() {
     const [error , setError]=useState(false)
+    const [showErrors, setShowErrors] = useState(false);
   const formik = useFormik({
     initialValues: {
       email: "",
       Password: "",
     },
-    validationSchema: SignUpSchema,
+    validationSchema: signUpSchema,
     onSubmit: (values) => {
         setError(false);
       alert(JSON.stringify(values, null, 2));

@@ -41,9 +41,9 @@ export default function TableComponent() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell><b>Name</b></TableCell>
-              <TableCell><b>Age</b></TableCell>
-              <TableCell><b>City</b></TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }}><b>Name</b></TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }}><b>Age</b></TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }}><b>City</b></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

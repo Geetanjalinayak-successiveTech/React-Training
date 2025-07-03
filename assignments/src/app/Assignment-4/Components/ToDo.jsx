@@ -1,5 +1,5 @@
 "use client";
-import { use, useState } from "react";
+import {  useState } from "react";
 
 export default function ToDo() {
   const tasks = [
@@ -11,7 +11,7 @@ export default function ToDo() {
 
   function handleClick() {
     if (addTask.trim() !== "") {
-      const newTask = { id: tasks.length + 1, name: addTask };
+      const newTask = { id: task.length + 1, name: addTask };
       setTasks([...tasks, newTask]);
       setAddTask("");
     }

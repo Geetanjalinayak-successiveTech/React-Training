@@ -5,8 +5,8 @@ export default function Form() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
 
-  const [department, setDepartment] = useState();
-  const [gender, setGender] = useState();
+  const [department, setDepartment] = useState("");
+  const [gender, setGender] = useState("");
 
   return (
     <form
