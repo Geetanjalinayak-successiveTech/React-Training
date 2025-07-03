@@ -7,13 +7,13 @@ const SignUpSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
 
   Password: Yup.string()
-    .min(4, "Too Short!")
-    .max(50, "Too Long!")
+    .min(4, "Your Password should be  more than 4 characters!")
+    .max(50, "Your Password should be less than 50 characters!")
     .required("Required"),
 });
 
 export default function ComplexForm() {
-  const formik = useFormik({
+  const { values, errors, touched, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: {
       email: "",
       Password: "",
@@ -41,30 +41,30 @@ export default function ComplexForm() {
         Signup Form
       </Typography>
 
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <TextField
           fullWidth
           label="Email"
           name="email"
           margin="normal"
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
+          value={values.email}          
+          onChange={handleChange}        
+          onBlur={handleBlur}            
+          error={touched.email && Boolean(errors.email)}  
+          helperText={touched.email && errors.email}     
         />
 
         <TextField
           fullWidth
           label="Password"
-          name="Password"
-          type="Password"
+          name="password"
+          type="password"
           margin="normal"
-          value={formik.values.Password}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.Password && Boolean(formik.errors.Password)}
-          helperText={formik.touched.Password && formik.errors.Password}
+          value={values.password}      
+          onChange={handleChange}       
+          onBlur={handleBlur}          
+          error={touched.Password && Boolean(errors.Password)}  
+          helperText={touched.Password && errors.Password}      
         />
 
         <Button

@@ -5,10 +5,17 @@ import { useState } from "react"
 
 export default function DropDown()
 {
-    const [select,useSelect]= useState("");
+    const [select,setSelect]= useState("");
+    const [isOpen,setIsOpen] = useState(false)
     function handleClick()
     {
-        document.getElementById("drpdwn").classList.toggle()
+        setIsOpen(!isOpen)
+    }
+
+    function handleSelect(option)
+    {
+        setSelect(option)
+        setIsOpen(false);
     }
 
 
@@ -20,12 +27,20 @@ export default function DropDown()
         minHeight: "100vh",
         background: "#f4f4f4",
       }}>
-            <h1 id="drpdwn">DropDown Select</h1>
+             <h1>{select ? `Selected: ${select}` : "DropDown Select"}</h1>
 
-            <div>
-                <button onClick={handleClick}>Dropdown</button>
+      <div>
+        <button onClick={handleClick}>Dropdown</button>
 
-            </div>
+    
+        {isOpen && (
+          <ul style={{ padding: 0, listStyleType: "none", marginTop: "10px" }}>
+            <li onClick={() => handleSelect("Option 1")}>Option 1</li>
+            <li onClick={() => handleSelect("Option 2")}>Option 2</li>
+            <li onClick={() => handleSelect("Option 3")}>Option 3</li>
+          </ul>
+        )}
+      </div>
         </main>
     )
 }
