@@ -75,6 +75,7 @@ export default function HomePage() {
             fontWeight: "bold",
             transition: "transform 0.3s, box-shadow 0.3s",
           }}>
+          }}>
           <Link href="/Assignment-4">Assignment-4</Link>
         </li>
 
